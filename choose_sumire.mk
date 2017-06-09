@@ -30,6 +30,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit Choose-A GSM telephony parts
 PRODUCT_PROPERTY_OVERRIDES += telephony.lteOnGSMDevice=1
 $(call inherit-product, vendor/choose-a/config/gsm.mk)
+$(call inherit-product-if-exists, vendor/choose-a/products/gms.mk)
 
 # Override Product Name for Choose-A-Rom
 PRODUCT_DEVICE := sumire
